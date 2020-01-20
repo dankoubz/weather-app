@@ -1,4 +1,29 @@
 body {
   margin: 0;
   background-color: #1a1a1a;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.border {
+  border: #2a2a2a 1px solid !important;
+}
+
+button, button:focus, button:active {
+  outline: none !important;
+}
+
+h1,h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
 }

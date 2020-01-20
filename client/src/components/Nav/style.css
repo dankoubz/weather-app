@@ -1,0 +1,106 @@
+
+section {
+    padding: 30px 40px 0 40px !important;
+    position: absolute;
+    z-index: 2;
+}
+
+nav {
+    height: 60px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: rgba(26, 26, 26, 0.4);
+    -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+}
+
+input {
+    width: 400px !important;
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+}
+
+.btn-round {
+    border-radius: 20px !important;
+    height: 40px !important;
+    color: white;
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+}
+
+aside {
+    position: relative;
+}
+
+img.logo {
+    position: absolute;
+    width: 165px;
+}
+
+img.icon {
+    width: 12px;
+}
+
+.active {
+    background: teal !important;
+}
+
+.active:hover {
+    background:black !important;
+}
+
+.triangle {
+    padding: 0 3px 0 0;
+    font-size: 11px;
+}
+
+.autocomplete-dropdown-container {
+    z-index: 5;
+    margin: 10px 0 0 0;
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+}
+
+div.suggestion-item {
+   padding: 5px 10px;
+   background: none !important;
+   z-index: 5;
+}
+
+.suggestion-item--active {
+    padding: 5px 10px;
+    background-color: #2a2a2a !important;
+}
+
+
+@media only screen and (max-width: 992px) {
+    section {
+        padding: 30px 0 0 0 !important;
+    }
+    input {width: 325px !important;}
+    nav {
+      height: auto;
+      border-radius: 0;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 692px) { 
+    input {width: 100% !important;}
+}
