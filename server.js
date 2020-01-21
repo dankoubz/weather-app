@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 // app.use(routes);
-require("./routes/htmlRoutes")(app);
+// app.use(public);
+require("../routes/htmlRoutes")(app);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
