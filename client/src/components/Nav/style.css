@@ -8,7 +8,7 @@ section {
 nav {
     height: 60px;
     border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    box-shadow: -5px 5px 5px rgba(34, 34, 34, 0.3);
     background-color: rgba(26, 26, 26, 0.4);
     -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
@@ -23,9 +23,13 @@ input {
     color: white;
     outline: none;
     border: none;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(9, 9, 9, 0.2);
     -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
+}
+
+::placeholder {
+    color: white !important;
 }
 
 .btn-round {
@@ -33,7 +37,7 @@ input {
     height: 40px !important;
     color: white;
     border: none !important;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(9, 9, 9, 0.2);
     -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
 }
@@ -86,21 +90,22 @@ div.suggestion-item {
     background-color: #2a2a2a !important;
 }
 
-
 @media only screen and (max-width: 992px) {
     section {
-        padding: 30px 0 0 0 !important;
+        padding: 10px 0 0 0 !important;
     }
-    input {width: 325px !important;}
+    input {width: 425px !important;}
     nav {
       height: auto;
       border-radius: 0;
+      padding: 10px 0 15px 0;
     }
     .logo{
         display: none;
     }
+    .places { margin: 5px 0 0 0;}
 }
 
 @media only screen and (max-width: 692px) { 
-    input {width: 100% !important;}
+    input {width: 350px !important;}
 }

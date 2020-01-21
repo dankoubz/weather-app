@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import AnimatedBG from "../AnimatedBG"
 import moment from 'moment';
 import "./style.css";
 
@@ -8,13 +9,21 @@ let cardSplit = "p-2 m-0 col-12 h-100 d-flex justify-content-center align-items-
 
 class Card extends Component {
 
+  state = {
+    weather: "",
+    animation: ""
+  };
+
   render(props) {
 
-    console.log(this.props.day);
+    // console.log(this.props.day);
     let timeDate = moment(this.props.day.utcTime).format('DD MMM');
 
     return (
-      <article className="border col-12 p-0">
+      <article className="col-12 p-0">
+
+        <AnimatedBG layout={this.props.day.skyDescription}/>
+
         <div className={cardSect}>
           <div className={`w-50 ${cardBox}`}>
             <div className="row">

@@ -1,7 +1,9 @@
 article {
     height: 100vh;
     /* border: 1px solid white; */
-    background: #2a2a2a;
+    /* background: #2a2a2a; */
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .card-sect {
@@ -12,9 +14,10 @@ article {
     padding: 20px 10px;
     height: auto;
     border-radius: 15px;
-    background-color: rgba(26, 26, 26, 0.4);
-    -webkit-backdrop-filter: blur(2px);
-      backdrop-filter: blur(2px);
+    box-shadow: -5px 5px 5px rgba(34, 34, 34, 0.3);
+    background-color: rgba(26, 26, 26, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
 }
 
 h1.big-text {
@@ -23,4 +26,21 @@ h1.big-text {
 
 .textStyle {
     line-height: .7em;  
+}
+
+.tag {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    border-radius: 25px;
+    background-color: rgba(26, 26, 26, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+}
+
+div.tag p {
+    margin: 0;
+    padding: 4px 7px;
+    font-size: .7em;
 }

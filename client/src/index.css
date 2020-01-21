@@ -5,6 +5,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.mainScreen {
+  overflow: hidden;
+}
+
 .border {
   border: #2a2a2a 1px solid !important;
 }

@@ -51,7 +51,7 @@ class Nav extends Component {
   render() {
     return (
       <section className="container-fluid">
-        <nav className="col-12 border">
+        <nav className="col-12">
           <div className="row h-100">
 
             <div className="logo col-lg-3">
@@ -60,7 +60,7 @@ class Nav extends Component {
               </aside>
             </div>
 
-            <div className="col-7 col-md-8 col-lg-6 p-0">
+            <div className="col-12 col-md-8 col-lg-6 p-0">
               <div className="w-100 h-100 d-flex justify-content-center align-items-center">
                 <button onClick={this.getGeoLocation} className={`btn btn-round pl-3 pr-3 ml-2 mr-2 btn-light ${this.state.condition ? `active`: ``}`} type="button" id="saved">
                   <img className="icon pb-1" alt="location-pin" src="../assets/logo/pin-icon.png"></img>
@@ -70,10 +70,7 @@ class Nav extends Component {
                       {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                         <div>
                           <input
-                            {...getInputProps({
-                              placeholder: 'Current places',
-                              className: 'location-search-input',
-                            })} />
+                            {...getInputProps({ placeholder: 'Your Current Location', className: 'location-search-input',})} />
                           <div className="autocomplete-dropdown-container">
                             {loading && <p className="text-center">Loading...</p>}
                             {suggestions.map(suggestion => {
@@ -99,8 +96,8 @@ class Nav extends Component {
               </div>
             </div>
 
-            <div className="col-5 col-md-4 col-lg-3">
-              <aside className="w-100 h-100 d-flex justify-content-center align-items-center">
+            <div className=" col-12 col-md-4 col-lg-3">
+              <aside className="places w-100 h-100 d-flex justify-content-center align-items-center">
                 <button className="btn btn-round pl-3 pr-3 mr-2 btn-light" type="button" id="saved">♥</button>
                 <button className="btn btn-round pl-4 pr-4 btn-light" type="button" id="saved">
                   Places <span className="triangle">▼</span>

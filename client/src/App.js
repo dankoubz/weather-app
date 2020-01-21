@@ -15,24 +15,10 @@ class App extends Component {
   setCurrentLocation = (location) => {
     this.setState({...this.state, currentLocation: location});
     this.callWeatherForecast(location);
-    this.callWeatherUpdateHourly(location);
-  }
-
-  callWeatherUpdateHourly = (data) => {
-    console.log(data);
-
-    let lat = data.lat;
-    let long = data.lng;
-    let LATLONG = "&latitude=" + lat + "&longitude=" + long;
-
-    API.todayUpdate(LATLONG).then(res => {
-        this.setState({today: res.data.hourlyForecasts.forecastLocation.forecast});
-      })
-      .catch(err => console.log(err));
   }
 
   callWeatherForecast = (data) => {
-    console.log(data);
+    // console.log(data);
 
     let lat = data.lat;
     let long = data.lng;
@@ -48,15 +34,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Nav
-          currentLocation={this.state.currentLocation}
-          setCurrentLocation={this.setCurrentLocation}
-          />
-
-        <div className="container-fluid p-0">
+        <Nav currentLocation={this.state.currentLocation} setCurrentLocation={this.setCurrentLocation} />
+          
+        <div className="mainScreen container-fluid p-0">
           <Carousel 
-          forecast={this.state.forecast}
-          today={this.state.today}/>
+          forecast={this.state.forecast}/>
           <Loading />
         </div>
         

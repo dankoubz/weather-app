@@ -1,0 +1,151 @@
+.bg-1 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#F07B7E, #FFCA4E);
+    z-index: -3;
+    background-color: none;
+}
+
+.bg-2 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient( rgb(206, 145, 148), rgb(182, 140, 104));
+    z-index: -3;
+    background-color: none;
+}
+
+.bg-3 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient( #3594B1, #A4A8E8);
+    z-index: -3;
+    background-color: none;
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba(26, 26, 26, 0.1);
+}
+
+
+.overlay2 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    background-color: rgba(26, 26, 26, 0.5);
+}
+
+.rain {
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+}
+
+.r-2 {
+    top: 400px;
+}
+
+.r-3 {
+    top: 800px;
+}
+
+.imageFG {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.imageMG {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+}
+
+.imageSun {
+    position: absolute;
+    z-index: -2;
+    top: 27%;
+    left: 20px;
+    width: 180px;
+}
+
+.cloud {
+    position: absolute;
+    opacity: .5;
+}
+
+.cloud2 {
+    position: absolute;
+    opacity: .9;
+}
+
+@keyframes cloud {
+    from {
+      right: -200px;
+    }
+  
+    to {
+      right: 800px;
+    }
+  }
+
+  @keyframes cloud2 {
+    from {
+      right: -200px;
+    }
+  
+    to {
+      right: 500px;
+    }
+  }
+
+.c-1 {
+    top: 80px;
+    animation: cloud 20s linear infinite
+}
+
+.c-2 {
+    top: 27%;
+    animation: cloud 30s linear infinite
+}
+
+.c-3 {
+    top: 27%;
+    width: 40px;
+    animation: cloud 40s linear infinite
+}
+
+.c-4 {
+    top: 37%;
+    left: 10%;
+    width: 180px;
+    animation: cloud 50s linear infinite
+}
+
+.c-5 {
+    animation: cloud 50s linear infinite
+}
+
+.c-6 {
+    top: 130px;
+    width: 90px;
+    animation: cloud2 60s linear infinite
+}
+
+.c-7 {
+    width: 90px;
+    animation: cloud2 30s linear infinite
+}
+
+.c-8 {
+    top: 65%;
+    width: 150px;
+    animation: cloud 100s linear infinite
+}
