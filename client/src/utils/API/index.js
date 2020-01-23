@@ -10,7 +10,7 @@ const APIKEY = "&apiKey=frtdROm5t4NWRtHyY4kDV47OMCj5B3t1Wl4I_p_mIXE";
 
 export default {
   forecastUpdate : function (LONGLAT) {
-    return axios.get('https://cors-anywhere.herokuapp.com/' + BASEURL + FORECAST + LONGLAT + OBSERVE + APIKEY);
+    return axios.get( BASEURL + FORECAST + LONGLAT + OBSERVE + APIKEY);
   }
   // todayUpdate: function () {
   //   return axios.get('https://cors-anywhere.herokuapp.com/' + BASEURL + FORECASTHOURLY + NAMEPLACE + APIKEY);
