@@ -71,7 +71,7 @@
 .imageSun {
     position: absolute;
     z-index: -2;
-    top: 27%;
+    top: 25%;
     left: 20px;
     width: 180px;
 }
@@ -123,7 +123,7 @@
 }
 
 .c-4 {
-    top: 37%;
+    top: 34%;
     left: 10%;
     width: 180px;
     animation: cloud 50s linear infinite

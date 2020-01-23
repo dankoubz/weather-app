@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import Nav from "./components/Nav";
 import Carousel from "./components/Carousel";
-import Loading from "./components/Loading"
+import Loading from "./components/Loading";
+import Places from "./components/Places";
 import API from "./utils/API";
 
 class App extends Component {
@@ -12,14 +13,16 @@ class App extends Component {
     currentLocation: {} // geolocation
   };
 
+  setPlacesState = (data) => {
+    console.log(data);
+  }
+
   setCurrentLocation = (location) => {
-    this.setState({...this.state, currentLocation: location});
+    this.setState({...this.state, currentLocation: {location}});
     this.callWeatherForecast(location);
   }
 
   callWeatherForecast = (data) => {
-    // console.log(data);
-
     let lat = data.lat;
     let long = data.lng;
     let LATLONG = "&latitude=" + lat + "&longitude=" + long;
@@ -34,11 +37,18 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Nav currentLocation={this.state.currentLocation} setCurrentLocation={this.setCurrentLocation} />
+        <Nav 
+          currentLocation={this.state.currentLocation} 
+          setCurrentLocation={this.setCurrentLocation} 
+        />
+
+        <Places />
           
-        <div className="mainScreen container-fluid p-0">
+        <div className="mainScreen container-fluid">
+          
           <Carousel 
-          forecast={this.state.forecast}/>
+            forecast={this.state.forecast} 
+            setPlacesState={this.setPlacesState} />
           <Loading />
         </div>
         

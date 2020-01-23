@@ -4,20 +4,18 @@ import "./style.css";
 class AnimatedBG extends Component {
 
   getLayout = (currentLayout) =>{
-    console.log('currLay', currentLayout)
+    // console.log('currLay', currentLayout)
     switch(currentLayout) {
       case "Sunny":
           return this.layouts.sunny
       case "Mostly cloudy":
       case "Afternoon clouds":
       case "Morning clouds":
-      case "Mostly cloudy":
           return this.layouts.cloudy
       default:
         return this.layouts.sunny
     }
   }
-  
 
   layouts = {
     sunny:{
@@ -74,14 +72,11 @@ class AnimatedBG extends Component {
     // console.log('post', currentLayout);
 
     return (
-
-      // <div></div>
-        <div className={currentLayout.bgClass}>
-            {currentLayout.preLayout.map(item => <img {...item}></img>)}
-            <div className={currentLayout.overlayClass}></div>
-            {currentLayout.postLayout.map(item => <img {...item}></img>)}
-        </div>
-        
+    <div className={currentLayout.bgClass}>
+        {currentLayout.preLayout.map((item, index) => <img key={index} alt="bg-img" {...item}></img>)}
+        <div className={currentLayout.overlayClass}></div>
+        {currentLayout.postLayout.map((item, index) => <img key={index} alt="bg-img" {...item}></img>)}
+    </div>
     )
   }
 }

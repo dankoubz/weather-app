@@ -4,7 +4,7 @@ import moment from 'moment';
 import "./style.css";
 
 let cardSect = "p-0 col-12 d-flex justify-content-center align-items-center card-sect";
-let cardBox = "mt-5 d-flex justify-content-center align-items-center text-center card-box";
+let cardBox = "d-flex justify-content-center align-items-center text-center card-box";
 let cardSplit = "p-2 m-0 col-12 h-100 d-flex justify-content-center align-items-center";
 
 class Card extends Component {
@@ -25,7 +25,7 @@ class Card extends Component {
         <AnimatedBG layout={this.props.day.skyDescription}/>
 
         <div className={cardSect}>
-          <div className={`w-50 ${cardBox}`}>
+          <div className={`w-50 gap ${cardBox}`}>
             <div className="row">
               <div className="col-12">
                 <p className="textStyle">{this.props.day.weekday}</p>
@@ -36,7 +36,7 @@ class Card extends Component {
         </div>
 
         <div className={cardSect}>
-          <div className={`col-9 ${cardBox}`}>
+          <div className={`col-9 mt-3 ${cardBox}`}>
             <div className="row">
               <div className={cardSplit}>
                 <div className="w-100">
@@ -56,28 +56,29 @@ class Card extends Component {
 
         <div className={cardSect}>
           <div className={`col-9 ${cardBox}`}>
-            <div className="p-3 row">
+            <div className="p-2 row text-center">
               <div className="col-4 text-center">
-                <h4 className="textStyle">{this.props.day.humidity}
+                <h4 className="textStyle text-center">{this.props.day.humidity}
                   <small>%</small>
                 </h4>
-                <p className="textStyle">
-                  <small>Humidity</small>
+                <p className="textStyle text-center">
+                  <small className="">Humidity</small>
                 </p>
               </div>
               <div className="col-4 text-center">
-                <h4 className="textStyle">{(this.props.day.windSpeed * 1).toFixed(0)}
+                <h4 className="textStyle">
+                  {(this.props.day.windSpeed * 1).toFixed(0)}
                   <small>km</small>
                 </h4>
-                <p className="textStyle">
+                <p className="textStyle text-center">
                   <small>Wind</small>
                 </p>
               </div>
               <div className="col-4 text-center">
-                <h4 className="textStyle">{this.props.day.precipitationProbability}
+                <h4 className="textStyle text-center">{this.props.day.precipitationProbability}
                   <small>%</small>
                 </h4>
-                <p className="textStyle">
+                <p className="textStyle text-center">
                   <small>Rain</small>
                 </p>
               </div>

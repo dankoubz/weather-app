@@ -20,12 +20,20 @@ article {
       backdrop-filter: blur(10px);
 }
 
+.gap {
+    margin-top: 80px;
+}
+
 h1.big-text {
     font-size: 3.5em;
 }
 
 .textStyle {
     line-height: .7em;  
+}
+
+h4.textStyle {
+    font-size: 1.2em;
 }
 
 .tag {
@@ -42,5 +50,9 @@ h1.big-text {
 div.tag p {
     margin: 0;
     padding: 4px 7px;
+    font-size: .7em;
+}
+
+small {
     font-size: .7em;
 }

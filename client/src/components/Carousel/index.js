@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import CardForecast from "../Card";
-import CardHourly from "../CardHourly";
 import "./style.css";
 
 export default class Carousel extends Component {
@@ -52,22 +51,12 @@ export default class Carousel extends Component {
       ]
     };
 
-    console.log("THIS ONE!!");
-    console.log(this.props.forecast[0]);
-
-    const firstForecast = (this.props.forecast[0]);
-    console.log(firstForecast);
-
     return (
       <main className="border">
         <Slider {...settings}> 
-
-          {/* <CardHourly day={this.props.forecast}/> */}
-
           {this.props.forecast.map((d => 
-            <CardForecast key={0} day={d}/>))}
+          <CardForecast key={d} day={d}/> ))}
         </Slider>
-        
       </main>
     );
   }
